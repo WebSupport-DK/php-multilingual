@@ -1,5 +1,6 @@
 {
     "name": "thom855j/php-multilingual",
+    "license": "MIT",
     "description": "Simple classes for making multilingual websites",
     "require": {
         "php": ">=5.4.0"
