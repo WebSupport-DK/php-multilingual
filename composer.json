@@ -1,0 +1,7 @@
+{
+    "name": "thom855j/PHPMultilingual",
+    "description": "Simple classes for making multilingual websites",
+    "require": {
+        "php": ">=5.4.0"
+    }
+}
