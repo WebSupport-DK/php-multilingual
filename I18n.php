@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates 
  * and open the template in the editor. 
  */ 
-namespace thom855j\PHPI18n;
+namespace thom855j\php_multilingual;
 
 class I18n 
 { 
