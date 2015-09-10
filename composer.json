@@ -1,5 +1,5 @@
 {
-    "name": "thom855j/php_multilingual",
+    "name": "thom855j/php-multilingual",
     "description": "Simple classes for making multilingual websites",
     "require": {
         "php": ">=5.4.0"
