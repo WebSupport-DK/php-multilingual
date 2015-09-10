@@ -1,7 +1,7 @@
 <?php
 
 // load the class
-require_once '../I18n.php';
+require_once '../src/I18n.php';
 
 // use class
 use thom855j\PHPI18n\I18n;
