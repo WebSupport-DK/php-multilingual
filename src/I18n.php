@@ -1,80 +1,63 @@
-<?php 
+<?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties. 
  * To change this template file, choose Tools | Templates 
  * and open the template in the editor. 
- */ 
+ */
+
 namespace thom855j\PHPMultilingual;
 
-class I18n 
-{ 
+class I18n
+{
 
-    private static 
-            $locale , $texts , $storage ; 
+    private static
+            $locale, $texts, $storage;
 
-    public static 
-            function set( $locale ) 
-    { 
+    public static
+            function set($locale)
+    {
 
-        self::$locale = $locale ; 
-    } 
+        self::$locale = $locale;
+    }
 
-    public static 
-            function register( $path , $token ) 
-    { 
+    public static
+            function register($path, $token)
+    {
 
-        self::$storage[ $token ] = $path ; 
-    } 
+        self::$storage[$token] = $path;
+    }
 
-    public static 
-            function get( $key , $token ) 
-    { 
+    public static
+            function get($string, $return = true)
+    {
+        // we split up the string in path and key
+        $path = strstr(strtolower($string), '_', true);
+        $key  = substr($string, strpos($string, "_") + 1);
+
         // if not $key 
-        if ( !$key ) 
-        { 
-            return null ; 
-        } 
+        if (!$string)
+        {
+            return null;
+        }
+
         // load config file (this is only done once per application lifecycle) 
-
-
-        self::$texts[ $token ] = require(self::$storage[ $token ] . '/' . substr( self::$locale , 
-                                                                                  0 , 
-                                                                                  -3 ) . '/' . substr( self::$locale , 
-                                                                                                       -2 
-                ) . '.php') ; 
+        self::$texts[$path] = require(self::$storage[$path] . '/' . substr(self::$locale, 0, -3) . '/' . substr(self::$locale, -2) . '.php');
 
         // check if array key exists 
-        if ( !array_key_exists( $key , self::$texts[ $token ] ) ) 
-        { 
-            return null ; 
-        } 
-        return self::$texts[ $token ][ $key ] ; 
-    } 
+        if (!array_key_exists($string, self::$texts[$path]))
+        {
+            return null;
+        }
 
-    public static 
-            function output( $key , $token ) 
-    { 
-        // if not $key 
-        if ( !$key ) 
-        { 
-            return null ; 
-        } 
-        // load config file (this is only done once per application lifecycle) 
+        if ($return)
+        {
+            return self::$texts[$path][$string];
+        }
+        else
+        {
+            echo self::$texts[$path][$string];
+        }
+    }
 
-
-        self::$texts[ $token ] = require(self::$storage[ $token ] . '/' . substr( self::$locale , 
-                                                                                  0 , 
-                                                                                  -3 ) . '/' . substr( self::$locale , 
-                                                                                                       -2 
-                ) . '.php') ; 
-
-        // check if array key exists 
-        if ( !array_key_exists( $key , self::$texts[ $token ] ) ) 
-        { 
-            return null ; 
-        } 
-        echo self::$texts[ $token ][ $key ] ; 
-    } 
-
-} 
+}
