@@ -18,7 +18,8 @@ I18n::set($locale = 'en_US');
 I18n::register($path = 'path/to/language', $token = 'test');
 
 // return the string of the language with the token
-I18n::get($key = 'VIEW_TEST', $token = 'test');
+// the first part (before '_') tells the path, and the rest (after '_') tells the key
+I18n::get('VIEW_TEST');
 
 // output/echo the string
-I18n::output($key = 'VIEW_TEST', $token = 'test');
+I18n::get('VIEW_TEST',false);
