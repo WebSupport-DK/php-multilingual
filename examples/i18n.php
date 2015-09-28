@@ -11,7 +11,7 @@ return array(
     'VIEW_TEST' => 'This is a test!'
 );
 
-// set the local for the class in form of "en_US"
+// set the local for the class in form of "en_US" (could be set by a cookie or session at run-time)
 I18n::set($locale = 'en_US');
 
 // register alle the locations of the language files with a token
