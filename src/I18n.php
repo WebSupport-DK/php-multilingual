@@ -6,7 +6,7 @@
  * and open the template in the editor. 
  */
 
-namespace thom855j\PHPMultilingual;
+namespace WebSupportDK\PHPMultilingual;
 
 class I18n
 {
