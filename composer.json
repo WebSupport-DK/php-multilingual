@@ -1,5 +1,5 @@
 {
-    "name": "thom855j/php-multilingual",
+    "name": "websupport-dk/php-multilingual",
     "version": "dev-master",
     "license": "MIT",
     "description": "Simple classes for making multilingual websites",
@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-4": {
-            "thom855j\\PHPMultilingual\\": "src/"
+            "WebSupportDK\\PHPMultilingual\\": "src/"
             }
         }
 }
