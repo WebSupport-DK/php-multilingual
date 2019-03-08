@@ -4,7 +4,7 @@
 require_once '../src/I18n.php';
 
 // use class
-use WebSupportDK\PHPMultilingual\I18n;
+use Datalaere\PHPMultilingual\I18n;
 
 // make language files in form of array in path/to/language/en/US.php, en/UK.php etc
 return array(

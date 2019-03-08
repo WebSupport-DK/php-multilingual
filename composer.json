@@ -1,5 +1,5 @@
 {
-    "name": "websupport-dk/php-multilingual",
+    "name": "datalaere/php-multilingual",
     "version": "dev-master",
     "license": "MIT",
     "description": "Simple classes for making multilingual websites",
@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WebSupportDK\\PHPMultilingual\\": "src/"
+            "Datalaere\\PHPMultilingual\\": "src/"
             }
         }
 }
