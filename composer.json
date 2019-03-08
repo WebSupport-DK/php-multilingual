@@ -1,8 +1,10 @@
 {
     "name": "datalaere/php-multilingual",
     "version": "dev-master",
-    "license": "MIT",
+    "type": "library",
     "description": "Simple classes for making multilingual websites",
+    "homepage": "https://github.com/datalaere/php-multilingual",
+    "license": "MIT",
     "require": {
         "php": ">=5.5.0"
     },
